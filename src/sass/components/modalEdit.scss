@@ -1,4 +1,4 @@
-.modal{
+.modalEdit{
     position: fixed;
     top: 0;
     right: 0;
@@ -9,13 +9,13 @@
     justify-content: center;
     align-items: center;
     display: none;
-    .modalBox{
+    .modalEditBox{
         background-color: #FFF;
         width: 315px;
         height: auto;
         border-radius: 10px;
         padding: 0px 20px;
-        .input{
+        .inputEdit{
             border: 1px solid rgb(211, 211, 211);
             border-radius: 10px;
             font-size: 16px;
@@ -36,7 +36,7 @@
                 font-size: 12px;
             }
         }
-        .statusBox{
+        .statusEditBox{
             background-color: rgb(211, 211, 211);
             border-radius: 5px;
             padding: 5px;
@@ -44,7 +44,7 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
-            .status{
+            .statusEdit{
                 height: 28px;
                 width: 48%;
                 border-radius: 5px;
@@ -57,7 +57,7 @@
                 background-color: #FFF;
             }
         }
-        .actionButtons{
+        .actionButtonsEdit{
             display: flex;
             justify-content: end;
             color: #0047FF;
@@ -70,3 +70,4 @@
         }
     }
 }
+

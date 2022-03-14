@@ -57,4 +57,10 @@
   background-color: #0039CC;
 }
 
+@media screen and (max-width: 500px) {
+  .header {
+    width: 0;
+  }
+}
+
 /*# sourceMappingURL=header.css.map */

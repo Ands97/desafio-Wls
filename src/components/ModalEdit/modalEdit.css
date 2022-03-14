@@ -1,4 +1,4 @@
-.modal {
+.modalEdit {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,21 +10,21 @@
   align-items: center;
   display: none;
 }
-.modal .modalBox {
+.modalEdit .modalEditBox {
   background-color: #FFF;
   width: 315px;
   height: auto;
   border-radius: 10px;
   padding: 0px 20px;
 }
-.modal .modalBox .input {
+.modalEdit .modalEditBox .inputEdit {
   border: 1px solid lightgray;
   border-radius: 10px;
   font-size: 16px;
   margin-bottom: 20px;
   height: 54px;
 }
-.modal .modalBox .input input {
+.modalEdit .modalEditBox .inputEdit input {
   flex: 1;
   border: 0;
   outline: 0;
@@ -35,10 +35,10 @@
   width: 100%;
   height: 100%;
 }
-.modal .modalBox .input legend {
+.modalEdit .modalEditBox .inputEdit legend {
   font-size: 12px;
 }
-.modal .modalBox .statusBox {
+.modalEdit .modalEditBox .statusEditBox {
   background-color: lightgray;
   border-radius: 5px;
   padding: 5px;
@@ -47,7 +47,7 @@
   align-items: center;
   justify-content: space-around;
 }
-.modal .modalBox .statusBox .status {
+.modalEdit .modalEditBox .statusEditBox .statusEdit {
   height: 28px;
   width: 48%;
   border-radius: 5px;
@@ -56,17 +56,17 @@
   align-items: center;
   font-weight: bolder;
 }
-.modal .modalBox .statusBox .selected {
+.modalEdit .modalEditBox .statusEditBox .selected {
   background-color: #FFF;
 }
-.modal .modalBox .actionButtons {
+.modalEdit .modalEditBox .actionButtonsEdit {
   display: flex;
   justify-content: end;
   color: #0047FF;
   font-weight: bolder;
   padding: 15px 0px;
 }
-.modal .modalBox .actionButtons span {
+.modalEdit .modalEditBox .actionButtonsEdit span {
   margin-right: 10px;
   cursor: pointer;
 }

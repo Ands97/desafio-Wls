@@ -1,22 +1,22 @@
 import './modalEdit.css'
 export const ModalEdit = () => {
     return (
-        <div className="modal">
-            <div className="modalBox">
+        <div className="modalEdit">
+            <div className="modalEditBox">
                 <h3>Criar tarefa</h3>
-                <fieldset className='input'>
+                <fieldset className='inputEdit'>
                     <legend>Titulo</legend>
                     <input type='text' placeholder='Titulo' />
                 </fieldset>
-                <fieldset className='input'>
+                <fieldset className='inputEdit'>
                     <legend>Descrição</legend>
                     <input type='text' placeholder='Descrição' />
                 </fieldset>
-                <div className='statusBox'>
-                    <div className='status selected'>Em progresso</div>
-                    <div className='status'>Concluído</div>
+                <div className='statusEditBox'>
+                    <div className='statusEdit selected'>Em progresso</div>
+                    <div className='statusEdit'>Concluído</div>
                 </div>
-                <div className='actionButtons'>
+                <div className='actionButtonsEdit'>
                     <span>CANCELAR</span>
                     <span>SALVAR</span>
                 </div>

@@ -5,6 +5,9 @@ import './home.css';
 export const Home = ()=>{
     return(
         <div className='home'>
+            <div className='burger'> 
+                <img src='../../../images/burger.svg'/>
+            </div>
             <section>
                 <div className='input'>
                     <div className='searchImg'><img src='../../../images/searchIcon.svg'/></div>
@@ -44,6 +47,9 @@ export const Home = ()=>{
                     </div>
                 </div>
             </section>
+            <div className='newTask'>
+                <img src='../../../images/newTask.svg'/>Nova tarefa
+            </div>
             <Modal/>
             <ModalEdit/>
         </div>
