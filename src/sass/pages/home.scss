@@ -1,0 +1,86 @@
+.home {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+
+        .input {
+            display: flex;
+            background-color: rgb(211, 211, 211);
+            width: 599px;
+            height: 46px;
+            border-radius: 15px;
+            position: relative;
+            align-items: center;
+
+            .searchImg {
+                width: 8%;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+
+            input {
+                flex: 1;
+                border: 0;
+                outline: 0;
+                background-color: transparent;
+                color: #000000;
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                width: 90%;
+            }
+        }
+
+        .taskArea {
+            margin-top: 50px;
+            color: #FFF;
+            h1{
+                color: #000000;
+                font-weight: bolder;
+            }
+            .taskBox{
+                margin-top: 15px;
+                background-color: #0047FF;
+                width: 586px;
+                height: 146px;
+                border-radius: 10px;
+                padding: 5px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .taskTopArea{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 18px;
+                    .taskInfo{
+                        display: flex;
+                        flex-direction: column;
+                        .taskTitle{
+                            font-weight: bolder;
+                        }
+                    }
+                }
+                .taskBottonArea{
+                    .taskStatus{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 104px;
+                        height: 32px;
+                        background-color: #FFF;
+                        color: #000000;
+                        font-weight: bolder;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

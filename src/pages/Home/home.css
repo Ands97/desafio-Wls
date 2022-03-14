@@ -1,0 +1,81 @@
+.home {
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.home section .input {
+  display: flex;
+  background-color: lightgray;
+  width: 599px;
+  height: 46px;
+  border-radius: 15px;
+  position: relative;
+  align-items: center;
+}
+.home section .input .searchImg {
+  width: 8%;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.home section .input input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  width: 90%;
+}
+.home section .taskArea {
+  margin-top: 50px;
+  color: #FFF;
+}
+.home section .taskArea h1 {
+  color: #000000;
+  font-weight: bolder;
+}
+.home section .taskArea .taskBox {
+  margin-top: 15px;
+  background-color: #0047FF;
+  width: 586px;
+  height: 146px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.home section .taskArea .taskBox .taskTopArea {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.home section .taskArea .taskBox .taskTopArea .taskInfo {
+  display: flex;
+  flex-direction: column;
+}
+.home section .taskArea .taskBox .taskTopArea .taskInfo .taskTitle {
+  font-weight: bolder;
+}
+.home section .taskArea .taskBox .taskBottonArea .taskStatus {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 104px;
+  height: 32px;
+  background-color: #FFF;
+  color: #000000;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=home.css.map */
