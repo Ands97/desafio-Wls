@@ -1,7 +1,19 @@
-import './modal.css'
+import './modal.css';
+import { TodoContext } from '../../contexts/todoContext';
+import { useContext } from 'react';
+
+
 export const Modal = () => {
+
+    const {showModal, setShowModal}: any = useContext(TodoContext);
+    
+    const handleShowModal = () => {
+        setShowModal(false)
+    }
+    
+
     return (
-        <div className="modal">
+        <div className="modal" style={{display: showModal && 'flex' }}>
             <div className="modalBox">
                 <h3>Criar tarefa</h3>
                 <fieldset className='input'>
@@ -13,7 +25,7 @@ export const Modal = () => {
                     <input type='text' placeholder='Descrição' />
                 </fieldset>
                 <div className='actionButtons'>
-                    <span>CANCELAR</span>
+                    <span onClick={handleShowModal}>CANCELAR</span>
                     <span>SALVAR</span>
                 </div>
             </div>

@@ -1,9 +1,12 @@
 import './header.css';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { TodoContext } from '../../contexts/todoContext';
 
 export const Header = ()=>{
+    const {showMenu, setShowMenu}: any = useContext(TodoContext)
     return (
-        <header className='header'>
+        <header className='header' style={{display: showMenu ? 'flex' : 'none'}}>
             <div className="profile">
                 <div className='profileImg'>
                     <img src="../../../images/profileIcon.svg"/>

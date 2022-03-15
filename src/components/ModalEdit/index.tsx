@@ -1,7 +1,17 @@
-import './modalEdit.css'
+import './modalEdit.css';
+import { TodoContext } from '../../contexts/todoContext';
+import { useContext } from 'react';
+
+
 export const ModalEdit = () => {
+
+    const {showModalEdit, setShowModalEdit}: any = useContext(TodoContext);
+
+    const handleShowModalEdit = () => {
+        setShowModalEdit(false)
+    }
     return (
-        <div className="modalEdit">
+        <div className="modalEdit" style={{display: showModalEdit ? 'flex' : "none"}}>
             <div className="modalEditBox">
                 <h3>Criar tarefa</h3>
                 <fieldset className='inputEdit'>
@@ -17,7 +27,7 @@ export const ModalEdit = () => {
                     <div className='statusEdit'>Concluído</div>
                 </div>
                 <div className='actionButtonsEdit'>
-                    <span>CANCELAR</span>
+                    <span onClick={handleShowModalEdit}>CANCELAR</span>
                     <span>SALVAR</span>
                 </div>
             </div>

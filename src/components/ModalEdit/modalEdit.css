@@ -8,7 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  display: none;
 }
 .modalEdit .modalEditBox {
   background-color: #FFF;
