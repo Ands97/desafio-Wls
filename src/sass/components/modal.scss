@@ -11,15 +11,16 @@
     .modalBox{
         background-color: #FFF;
         width: 315px;
-        height: 294px;
+        height: 370px;
         border-radius: 10px;
         padding: 0px 20px;
         .input{
             border: 1px solid rgb(211, 211, 211);
             border-radius: 10px;
             font-size: 16px;
-            margin-bottom: 20px;
             height: 54px;
+            margin-top: 30px;
+            margin-bottom: 10px;
             input{
                 flex: 1;
                 border: 0;
@@ -35,11 +36,17 @@
                 font-size: 12px;
             }
         }
+        .warning{
+            padding: 10px;
+            margin-top: 250px;
+            color: red;
+        }
         .actionButtons{
             display: flex;
             justify-content: end;
             color: #0047FF;
             font-weight: bolder;
+            margin-top: 30px;
             span{
                 margin-right: 10px;
                 cursor: pointer;

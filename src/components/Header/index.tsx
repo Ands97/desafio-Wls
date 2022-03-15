@@ -1,10 +1,19 @@
 import './header.css';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { TodoContext } from '../../contexts/todoContext';
 
 export const Header = ()=>{
-    const {showMenu, setShowMenu}: any = useContext(TodoContext)
+    const {showMenu, setShowMenu}: any = useContext(TodoContext);
+    const x = window.screen.width
+    const showHeader = () => {
+        if(x > 500 ){
+            setShowMenu(true)
+        }
+    }
+    useEffect(()=>{
+        showHeader()
+    }, [])
     return (
         <header className='header' style={{display: showMenu ? 'flex' : 'none'}}>
             <div className="profile">

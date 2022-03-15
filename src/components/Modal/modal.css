@@ -12,7 +12,7 @@
 .modal .modalBox {
   background-color: #FFF;
   width: 315px;
-  height: 294px;
+  height: 370px;
   border-radius: 10px;
   padding: 0px 20px;
 }
@@ -20,8 +20,9 @@
   border: 1px solid lightgray;
   border-radius: 10px;
   font-size: 16px;
-  margin-bottom: 20px;
   height: 54px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .modal .modalBox .input input {
   flex: 1;
@@ -37,11 +38,17 @@
 .modal .modalBox .input legend {
   font-size: 12px;
 }
+.modal .modalBox .warning {
+  padding: 10px;
+  margin-top: 250px;
+  color: red;
+}
 .modal .modalBox .actionButtons {
   display: flex;
   justify-content: end;
   color: #0047FF;
   font-weight: bolder;
+  margin-top: 30px;
 }
 .modal .modalBox .actionButtons span {
   margin-right: 10px;

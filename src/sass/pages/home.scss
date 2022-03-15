@@ -1,3 +1,8 @@
+@keyframes is-rotating{
+    to{
+        transform: rotate(1turn);
+    }
+}
 .home {
     margin-left: 200px;
     display: flex;
@@ -42,6 +47,19 @@
         .taskArea {
             margin-top: 50px;
             color: #FFF;
+            .loaderPosition{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .loader{
+                    animation: is-rotating 1s infinite;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: 6px solid #e5e5e5;
+                    border-top-color: #0047FF;
+                }
+            }
             h1{
                 color: #000000;
                 font-weight: bolder;
@@ -60,6 +78,7 @@
                     display: flex;
                     justify-content: space-between;
                     font-size: 18px;
+                    
                     .taskInfo{
                         display: flex;
                         flex-direction: column;
@@ -67,48 +86,44 @@
                             font-weight: bolder;
                         }
                     }
-                    .taskIconEdit{
+                    .updateTask{
                         cursor: pointer;
-                        width: 25px;
-                        height: 25px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    .menuTask{
-                        position: absolute;
-                        width: 194px;
-                        height: 94px;
                         background-color: #FFF;
-                        color: rgb(139, 138, 138);
-                        border-radius: 3px;
+                        color: #000000;
+                        width: 154px;
+                        height: 32px;
+                        border-radius: 5px;
                         display: flex;
-                        flex-direction: column;
-                        align-items: center;
                         justify-content: space-around;
-                        box-shadow: 0 1px 5px 0px #cac6ce;
-                        right: 300px;
-                        top: 310px;
-                        div{
-                            cursor: pointer;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-around;
-                            width: 100%;
-                        }
+                        align-items: center;
                     }
                 }
                 .taskBottonArea{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                     .taskStatus{
                         display: flex;
                         justify-content: space-around;
                         align-items: center;
-                        width: 104px;
+                        width: 154px;
                         height: 32px;
                         background-color: #FFF;
                         color: #000000;
                         font-weight: bolder;
                         border-radius: 5px;
+                        cursor: pointer;
+                    }
+                    .removeTask{
+                        cursor: pointer;
+                        background-color: #FFF;
+                        color: #000000;
+                        width: 154px;
+                        height: 32px;
+                        border-radius: 5px;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
                     }
                 }
             }

@@ -1,3 +1,8 @@
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
 .home {
   margin-left: 200px;
   display: flex;
@@ -41,6 +46,19 @@
   margin-top: 50px;
   color: #FFF;
 }
+.home section .taskArea .loaderPosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home section .taskArea .loaderPosition .loader {
+  animation: is-rotating 1s infinite;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 6px solid #e5e5e5;
+  border-top-color: #0047FF;
+}
 .home section .taskArea h1 {
   color: #000000;
   font-weight: bolder;
@@ -68,46 +86,44 @@
 .home section .taskArea .taskBox .taskTopArea .taskInfo .taskTitle {
   font-weight: bolder;
 }
-.home section .taskArea .taskBox .taskTopArea .taskIconEdit {
+.home section .taskArea .taskBox .taskTopArea .updateTask {
   cursor: pointer;
-  width: 25px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home section .taskArea .taskBox .taskTopArea .menuTask {
-  position: absolute;
-  width: 194px;
-  height: 94px;
   background-color: #FFF;
-  color: #8b8a8a;
-  border-radius: 3px;
+  color: #000000;
+  width: 154px;
+  height: 32px;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: space-around;
-  box-shadow: 0 1px 5px 0px #cac6ce;
-  right: 300px;
-  top: 310px;
+  align-items: center;
 }
-.home section .taskArea .taskBox .taskTopArea .menuTask div {
-  cursor: pointer;
+.home section .taskArea .taskBox .taskBottonArea {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
 }
 .home section .taskArea .taskBox .taskBottonArea .taskStatus {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 104px;
+  width: 154px;
   height: 32px;
   background-color: #FFF;
   color: #000000;
   font-weight: bolder;
   border-radius: 5px;
+  cursor: pointer;
+}
+.home section .taskArea .taskBox .taskBottonArea .removeTask {
+  cursor: pointer;
+  background-color: #FFF;
+  color: #000000;
+  width: 154px;
+  height: 32px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .home .newTask {
   background-color: #0047FF;
