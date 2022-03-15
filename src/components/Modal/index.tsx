@@ -5,18 +5,22 @@ import { useApi } from '../../Hooks/useApi';
 
 
 export const Modal = () => {
+    // Chamada do Hook onde serão feitas as requisições
     const api = useApi();
 
+    //States do context
     const {
         showModal,
         setShowModal,
     }: any = useContext(TodoContext);
 
+    //States do componente
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [messageTitle, setMessageTitle] = useState(false);
     const [messageDescription, setMessageDescription] = useState(false);
 
+    //Função para fechar o modal de nova tarefa
     const handleShowModal = () => {
         setShowModal(false)
         setTitle('');
@@ -25,6 +29,7 @@ export const Modal = () => {
         setMessageDescription(false);
     }
 
+    //Envio de nova tarefa e validando os campos
     const sendTask = async () => {
         if (!title) {
             setMessageTitle(true)
@@ -38,8 +43,9 @@ export const Modal = () => {
             setMessageTitle(false);
             setMessageDescription(false);
         }
-
     }
+
+
     return (
         <div className="modal" style={{ display: showModal && 'flex' }}>
             <div className="modalBox">

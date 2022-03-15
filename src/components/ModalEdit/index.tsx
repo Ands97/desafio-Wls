@@ -5,27 +5,41 @@ import { useApi } from '../../Hooks/useApi';
 import { Tasks } from '../../types/Tasks';
 
 export const ModalEdit = () => {
-    const api = useApi()
-    const { showModalEdit, setShowModalEdit, taskId, setTaskId }: any = useContext(TodoContext);
+
+    // Chamada do Hook onde serão feitas as requisições
+    const api = useApi();
+
+    //States do Context
+    const { 
+        showModalEdit, 
+        setShowModalEdit, 
+        taskId 
+    }: any = useContext(TodoContext);
+
+    //State do componente
     const [titleField, setTitleField] = useState('');
     const [descriptionField, setDescriptionField] = useState('');
     const [selected, setSelected] = useState('selected');
     const [unSelected, setUnSelected] = useState('');
     const [situation, setSituation] = useState('uncompleted')
 
+    // Função para mostrar o modal de atualização
     const handleShowModalEdit = () => {
         setShowModalEdit(false)
     }
+
+    //Alterar o botão selecionado do status da tarefa
     const handleSelected = () => {
         setUnSelected('')
         setSelected('selected')
-        
     }
     const handleUnSelected = () => {
         setUnSelected('selected')
         setSelected('')
         setSituation('completed')
     }
+
+    //Requisição para envio das informações que foram atualizadas
     const sendUpdate = async (id: string, title: string, description: string) => {
         if(titleField === ''){
             setTitleField(title)

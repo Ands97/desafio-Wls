@@ -6,7 +6,6 @@ type ChildrenType = React.PropsWithChildren<{}>;
 export const TodoContext = createContext({});
 
 
-
 export const TodoProvider = ({children}: ChildrenType)=>{
     const [showModal, setShowModal] = useState(false);
     const [showModalEdit, setShowModalEdit] = useState(false);

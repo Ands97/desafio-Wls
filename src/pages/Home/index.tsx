@@ -7,24 +7,26 @@ import { useApi } from '../../Hooks/useApi';
 import { Tasks } from '../../types/Tasks';
 
 export const Home = () => {
+    // Chamada do Hook onde serão feitas as requisições
+    const api = useApi();
+
+    //States do Context
     const {
-        showModal,
         setShowModal,
         showUpdateButton,
         setShowUpdateButton,
         setShowModalEdit,
-        showModalEdit,
         setShowMenu,
         showMenu,
         setTasks,
         tasks,
-        taskId,
         setTaskId
     }: any = useContext(TodoContext);
+
+    //State da página
     const [showLoading, setShowLoading] = useState(true);
 
-    const api = useApi()
-
+    //Tamanho da tela para mostrar apenas no Mobile
     const x = window.screen.width;
 
     const showUptButton = () => {
@@ -32,16 +34,19 @@ export const Home = () => {
             setShowUpdateButton(true)
         }
     }
+
     const handleModal = () => {
         setShowModal(true)
     }
 
+    //Atualização da Task
     const handleShowModalEdit = async(id:string) => {
         setShowModalEdit(true);
         const taskItem = await api.getTaskById(id);
         setTaskId([taskItem])
     }
 
+    //Header no mobile
     const handleMenuBurger = () => {
         if (showMenu) {
             setShowMenu(false)
@@ -50,28 +55,31 @@ export const Home = () => {
         }
     }
 
+    //Requisição de todas as Tasks
     const getTasks = async () => {
         const list = await api.getTasks();
         setShowLoading(false)
         if(list){
             setTasks(list);
         }
-        
     }
 
+    //Requisição para remover a task
     const removeTask = async(id: string) => {
         const remove = await api.removeTask(id);
         getTasks()
     }
 
+    //Alteração do status da taks (de unCompleted para Completed)
     const updateStatus = async (id: string) => {
         const upt = await api.updateStatus(id)
-        getTasks()
+        getTasks();
     }
+
+    
     useEffect(() => {
         getTasks(),
         showUptButton()
-        
     }, [tasks])
 
 
